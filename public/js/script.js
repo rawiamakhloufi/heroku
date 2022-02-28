@@ -1,52 +1,6 @@
 // the map
-<script type="text/javascript" src="region.js"></script>
+
 var map = L.map("map").setView([30.4937, -6.283], 6);
- var Styly = {
-            "color": "Grey",
-            "opacity": 1,
-            "weight": 1,
-            "fillColor": "White"
-        };
-
-        function highlightFeature(e) {
-        var layer = e.target;
-
-            layer.setStyle({
-            weight: 5,
-            color: '#666',
-            dashArray: '',
-            fillOpacity: 0.7
-        });
-
-            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-            layer.bringToFront();
-            }
-
-        }
-
-        function resetHighlight(e) {
-            region.resetStyle(e.target);
-
-        }
-        function zoomToFeature(e) {
-            map.fitBounds(e.target.getBounds());
-        }
-
-        function onEachFeature(feature, layer) {
-        layer.on({
-            mouseover: highlightFeature,
-            mouseout: resetHighlight,
-            click: zoomToFeature,
-    
-        });
-
-
-        }
-
-        var region = L.geoJson(region,{
-            style: Styly,
-            onEachFeature: onEachFeature
-        }).addTo(map);
 
 // Google Earth Hybrid basemap
 // L.tileLayer("http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}&s=Ga", {
