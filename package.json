@@ -1,0 +1,16 @@
+{
+  "name": "demo-postgis-nodejs-main",
+  "version": "1.0.0",
+  "description": "Web Mapping 2022, ESCGIT course project: creating a geoportal ...",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "pg": "^8.7.3"
+  }
+}
