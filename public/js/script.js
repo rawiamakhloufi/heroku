@@ -1,4 +1,5 @@
 // the map
+<script type="text/javascript" src="region.js"></script>
 var map = L.map("map").setView([30.4937, -6.283], 6);
  var Styly = {
             "color": "Grey",
