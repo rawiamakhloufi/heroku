@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- leaflet  -->
+    <link rel="stylesheet" href="css/leaflet.css">
+    <script src="js/leaflet.js"></script>
+    <title>Précipitation Maroc</title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="mapbox">
+            <div class="row-fluid some" id="map"></div>
+
+            <div class="row-fluid overlay">
+
+                <div class="box">
+                    <br><br><br>
+
+                    <div id="spatialQuery" class="DIV">
+                        <hr>
+                        <h3>Connection directe à la base de données Postgres avec extension PostGIS</h3>
+                        <h4>Pour ces requêtes spatiales merci de fetcher la géometrie sous forme de GeoJSON et l'aliaser
+                            <b>geom</b> comme : <b>ST_AsGeoJSON(geom) AS geom</b>
+                        </h4>
+                        <p>Ici essayer des requêtes comme:<br><br> <b>SELECT id, ST_AsGeoJSON(geom) AS geom FROM
+                                maroc</b><br><br>
+                            <b>SELECT id,
+                                ST_AsGeoJSON(geom) AS geom FROM communes WHERE mean2018 > 110</b><br><br>
+
+                        </p>
+                        <!-- <input name="searchTxt" type="text" maxlength="1024" id="searchTxt" class="searchField" /> -->
+
+                        <input name="text" rows="14" cols="10" wrap="soft" name="searchTxt" id="searchTxt"
+                            class="searchField">
+
+                        <button id="btngetQuery">QUERY</button>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+</body>
+<script src="js/script.js"></script>
+<script src="js/script2.js"></script>
+
+</html>
