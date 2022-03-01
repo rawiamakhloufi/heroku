@@ -21,7 +21,10 @@ body {
 }
 
 #map {
-  height: 10vh;
+  height:   50vh;
+  width: 50vh;
+  top: 20vh;
+  right: 20vh
 }
 
 .mapbox {
