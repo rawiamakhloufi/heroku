@@ -28,7 +28,7 @@
                         <hr>
                         <h3>Connection à une base de données Postgres avec extension PostGIS</h3>
 
-                        <p>Essayer des requêtes comme:<br><br> <b>SELECT id, ST_AsGeoJSON(geom) AS geom FROM region</b><br><br>
+                        <p>Essayer des requêtes comme:<br><br> <b>SELECT ST_AsGeoJSON(geom) AS geom FROM region</b><br><br>
                             <b>SELECT ST_AsGeoJSON(bus_csv.geom) AS geom FROM bus_csv, region WHERE ST_intersects(bus_csv.geom,region.geom)
                                 AND region.reg = 'Marrakech-Safi';</b><br><br>
 
