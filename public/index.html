@@ -27,10 +27,8 @@
                     <div id="spatialQuery" class="DIV">
                         <hr>
                         <h3>Connection à une base de données Postgres avec extension PostGIS</h3>
-                        <h4>Pour ces requêtes spatiales merci de fetcher la géometrie sous forme de GeoJSON et l'aliaser
-                            <b>geom</b> comme : <b>ST_AsGeoJSON(geom) AS geom</b>
-                        </h4>
-                        <p>Ici essayer des requêtes comme:<br><br> <b>SELECT id, ST_AsGeoJSON(geom) AS geom FROM region</b><br><br>
+
+                        <p>Essayer des requêtes comme:<br><br> <b>SELECT id, ST_AsGeoJSON(geom) AS geom FROM region</b><br><br>
                             <b>SELECT ST_AsGeoJSON(bus_csv.geom) AS geom FROM bus_csv, region WHERE ST_intersects(bus_csv.geom,region.geom)
                                 AND region.reg = 'Marrakech-Safi';</b><br><br>
 
@@ -40,7 +38,7 @@
                         <input name="text" rows="14" cols="10" wrap="soft" name="searchTxt" id="searchTxt"
                             class="searchField">
 
-                        <button id="btngetQuery">QUERY</button>
+                        <button id="btngetQuery">Execute</button>
                     </div>
                     <br>
 
